@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SDA - Structural Analyzer</string>
+    <string name="title_calibration">Calibración - Línea Base</string>
+    <string name="title_diagnostic">Diagnóstico Estructural</string>
+    <string name="title_result">Resultado del Análisis</string>
+</resources>

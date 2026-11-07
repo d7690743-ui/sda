@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <!-- SEMÁFORO -->
+        <LinearLayout
+            android:id="@+id/layout_semaphore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="#2E7D32" >
+
+            <TextView
+                android:id="@+id/tv_result_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RESULTADO"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_result_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingMultiplier="1.4" />
+        </LinearLayout>
+
+        <!-- Datos numéricos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ANÁLISIS ESPECTRAL"
+                android:textSize="11sp"
+                android:textColor="#757575"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/tv_result_base_freq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="f₀ (Base):   — Hz"
+                android:textSize="15sp"
+                android:fontFamily="monospace"
+                android:textColor="#1565C0"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tv_result_new_freq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="f₁ (Actual): — Hz"
+                android:textSize="15sp"
+                android:fontFamily="monospace"
+                android:textColor="#B71C1C"
+                android:layout_marginBottom="6dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EEEEEE"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tv_result_deviation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desviación:  —%"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:textColor="#212121" />
+        </LinearLayout>
+
+        <!-- Umbrales de referencia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UMBRALES DE CLASIFICACIÓN"
+                android:textSize="11sp"
+                android:textColor="#757575"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🟢  &lt; 3%     →  Estructura Estable"
+                android:textSize="13sp"
+                android:textColor="#2E7D32"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🟡  3% – 10% →  Alerta: Posible microfisuras"
+                android:textSize="13sp"
+                android:textColor="#F57F17"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔴  &gt; 10%    →  Peligro: Daño severo"
+                android:textSize="13sp"
+                android:textColor="#B71C1C" />
+        </LinearLayout>
+
+        <!-- Exportación -->
+        <Button
+            android:id="@+id/btn_export_spectrum"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="📊  Exportar espectro CSV"
+            android:textSize="13sp"
+            android:background="#37474F"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_export_report"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="📄  Exportar reporte TXT"
+            android:textSize="13sp"
+            android:background="#455A64"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_close"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Volver al inicio"
+            android:textSize="14sp"
+            android:background="#1565C0"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
