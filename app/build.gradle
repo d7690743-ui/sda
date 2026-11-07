@@ -35,3 +35,10 @@ dependencies {
     // el README viejo NO sirve: el código usa API de la 3.x.
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }
+
+// kotlin-stdlib 1.8.x ya incluye las clases de jdk7/jdk8: excluir los
+// artefactos legacy 1.6.x que llegan transitivos evita Duplicate class.
+configurations.all {
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk7'
+    exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-jdk8'
+}
