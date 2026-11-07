@@ -1,6 +1,6 @@
 package com.proyecto.sda.math;
 
-import edu.emory.mathcs.jtransforms.fft.DoubleFFT_1D;
+import org.jtransforms.fft.DoubleFFT_1D;
 
 import java.util.List;
 
